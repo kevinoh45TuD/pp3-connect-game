@@ -4,6 +4,10 @@
 def get_user_name():
     """Ask user's name to begin"""
     user_name = input("What is your name? \n")
-    print(f"Welcome {user_name}!")
+    if user_name.isalpha():
+        print(f"Welcome {user_name}!")
+    else:
+        print("You must only enter letters please")
+        get_user_name()
 
 get_user_name()
