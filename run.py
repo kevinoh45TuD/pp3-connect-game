@@ -1,3 +1,4 @@
+import time
 from start import print_title
 from screen import clear_screen
 
@@ -11,6 +12,7 @@ def get_user_name():
         get_user_name()
 
 print_title()
+time.sleep(3)
 clear_screen()
 get_user_name()
 
