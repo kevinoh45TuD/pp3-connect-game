@@ -1,9 +1,11 @@
+import os
 from start import print_title
 
 def get_user_name():
     """Ask user's name to begin"""
     user_name = input("What is your name? \n")
     if user_name.isalpha():
+        os.system('cls')
         print(f"Welcome {user_name}!")
     else:
         print("You must only enter letters please")
