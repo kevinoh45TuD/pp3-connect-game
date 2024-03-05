@@ -1,4 +1,4 @@
-from connect.board import print_board
+from connect.brain import Brain
 
 def print_title():
     print("""
@@ -18,4 +18,5 @@ def get_user_name():
         get_user_name()
 
 def start():
-    print_board()
+    brain = Brain("Player", "Rival")
+    brain.print_board()

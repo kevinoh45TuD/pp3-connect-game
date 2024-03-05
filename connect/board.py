@@ -32,7 +32,7 @@ def create_board(array):
             elif array[y][x] == "Y":
                 tile = """[bright_yellow]##\n##[/bright_yellow]"""
                 tiles.append(tile)
-        table.add_row(tiles) 
+        table.add_row(*tiles) 
 
     table = Align.center(table, vertical="middle")
 

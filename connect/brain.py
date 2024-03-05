@@ -1,5 +1,5 @@
 # File to contain 'Brain' class to contain all relevant info for current game
-from connect.board import print_board
+from connect.board import create_board
 
 class Brain:
     """
@@ -18,3 +18,6 @@ class Brain:
                       ["B","B","B","Y","B","B","B"],
                       ["B","R","R","Y","B","B","B"]]
         self.count = [0,0,0,0,0,0,0]
+
+    def print_board(self):
+        create_board(self.tiles)
