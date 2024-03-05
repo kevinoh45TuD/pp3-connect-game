@@ -3,7 +3,7 @@ from rich.table import Table
 from rich import box
 from rich.align import Align
 
-def print_board():
+def create_board(array):
     console = Console()
     
     tile = """##\n##"""
@@ -18,12 +18,21 @@ def print_board():
     table.add_column("6", style="bright_black", justify="center", width=5)
     table.add_column("7", style="bright_black", justify="center", width=5)
 
-    table.add_row(tile, tile, tile, tile, tile, tile, tile)
-    table.add_row(tile, tile, tile, tile, tile, tile, tile)
-    table.add_row(tile, tile, tile, tile, tile, tile, tile)
-    table.add_row(tile, tile, tile, tile, tile, tile, tile)
-    table.add_row(tile, tile, tile, tile, tile, tile, tile)
-    table.add_row(tile, tile, tile, tile, tile, tile, tile)
+    #table.add_row(tile, tile, tile, tile, tile, tile, tile)
+    
+    for y in range(6):
+        tiles = []
+        for x in range(7):
+            if array[y][x] == "B":
+                tile = """##\n##"""
+                tiles.append(tile)
+            elif array[y][x] == "R":
+                tile = """[bright_red]##\n##[/bright_red]"""
+                tiles.append(tile)
+            elif array[y][x] == "Y":
+                tile = """[bright_yellow]##\n##[/bright_yellow]"""
+                tiles.append(tile)
+        table.add_row(tiles) 
 
     table = Align.center(table, vertical="middle")
 
