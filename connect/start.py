@@ -1,3 +1,5 @@
+from connect.board import print_board
+
 def print_title():
     print("""
          ###  ####  #####  #####  ####   ###  #####    
@@ -16,5 +18,4 @@ def get_user_name():
         get_user_name()
 
 def start():
-    print_title()
-    get_user_name()
+    print_board()
