@@ -18,5 +18,5 @@ def get_user_name():
         get_user_name()
 
 def start():
-    brain = Brain("Player", "Rival")
-    brain.print_board()
+    brain = Brain("Player", "Rival", "Y")
+    brain.take_turn()

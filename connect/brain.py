@@ -8,16 +8,29 @@ class Brain:
     Calculate if there is a successfull connect!
     """
 
-    def __init__(self, player, rival):
+    def __init__(self, player, rival, color):
         self.player = player
         self.rival = rival
         self.tiles = [["B","B","B","B","B","B","B"],
                       ["B","B","B","B","B","B","B"],
                       ["B","B","B","B","B","B","B"],
-                      ["B","B","B","Y","B","B","B"],
-                      ["B","B","B","Y","B","B","B"],
-                      ["B","R","R","Y","B","B","B"]]
+                      ["B","B","B","B","B","B","B"],
+                      ["B","B","B","B","B","B","B"],
+                      ["B","B","B","B","B","B","B"]]
         self.count = [0,0,0,0,0,0,0]
+        self.color = color
 
     def print_board(self):
         create_board(self.tiles)
+        print(self.tiles)
+        print(self.count)
+
+    def take_turn(self):
+        player_choice = int(input("Pick a number! \n"))
+        if self.count[player_choice] <= 5:
+            y = 5 - self.count[player_choice]
+            self.tiles[y][player_choice-1] = self.color
+            self.print_board()
+            self.count[player_choice] = self.count[player_choice] + 1
+        else:
+            self.take_turn()
