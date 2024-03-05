@@ -6,4 +6,14 @@ class Brain:
     Print board with this information.
     Calculate if there is a successfull connect!
     """
-    
+
+    def __init__(self, player, rival):
+        self.player = player
+        self.rival = rival
+        self.tiles = [["B","B","B","B","B","B","B"],
+                      ["B","B","B","B","B","B","B"],
+                      ["B","B","B","B","B","B","B"],
+                      ["B","B","B","B","B","B","B"],
+                      ["B","B","B","B","B","B","B"],
+                      ["B","B","B","B","B","B","B"]]
+        self.count = [0,0,0,0,0,0,0]
