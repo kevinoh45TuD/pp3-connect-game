@@ -24,13 +24,13 @@ def create_board(array):
         tiles = []
         for x in range(7):
             if array[y][x] == "B":
-                tile = """##\n##"""
+                tile = """#"""
                 tiles.append(tile)
             elif array[y][x] == "R":
-                tile = """[bright_red]##\n##[/bright_red]"""
+                tile = """[bright_red]#[/bright_red]"""
                 tiles.append(tile)
             elif array[y][x] == "Y":
-                tile = """[bright_yellow]##\n##[/bright_yellow]"""
+                tile = """[bright_yellow]#[/bright_yellow]"""
                 tiles.append(tile)
         table.add_row(*tiles) 
 
