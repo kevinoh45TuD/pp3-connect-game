@@ -19,4 +19,7 @@ def get_user_name():
 
 def start():
     brain = Brain("Player", "Rival", "Y")
-    brain.take_turn()
+    x = 0
+    while x < 42:
+        brain.take_turn()
+        x = x + 1
