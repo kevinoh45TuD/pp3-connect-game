@@ -20,3 +20,4 @@ clear_screen()
 print_board()
 
 #pip3 freeze > requirements.txt
+#rich==13.7.1
