@@ -1,5 +1,6 @@
 # File to contain 'Brain' class to contain all relevant info for current game
 from connect.board import create_board
+from connect.screen import clear_screen
 
 class Brain:
     """
@@ -21,9 +22,8 @@ class Brain:
         self.color = color
 
     def print_board(self):
+        clear_screen()
         create_board(self.tiles)
-        print(self.tiles)
-        print(self.count)
 
     def take_turn(self):
         player_choice = int(input("Pick a number! \n"))
