@@ -14,3 +14,7 @@ def get_user_name():
     else:
         print("You must only enter letters please")
         get_user_name()
+
+def start():
+    print_title()
+    get_user_name()
