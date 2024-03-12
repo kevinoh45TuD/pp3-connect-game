@@ -1,4 +1,5 @@
 from connect.screen import clear_screen
+import random
 
 class Rival:
     """
@@ -12,3 +13,7 @@ class Rival:
         self.difficulty = difficulty
         self.color = color
         self.name = "Rival"
+
+    def rival_turn(self, brain):
+        choice = random.choice(brain.available)
+        brain.take_turn(choice, "R")

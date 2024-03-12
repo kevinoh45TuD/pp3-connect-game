@@ -20,7 +20,7 @@ class Player:
                 choice = int(input("""
                 Please pick and available option between 1-7"""))
                 if choice in brain.available:
-                    brain.take_turn(choice)
+                    brain.take_turn(choice, "P")
                     picked = True
                 else:
                     raise ValueError

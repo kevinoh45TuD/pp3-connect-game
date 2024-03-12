@@ -26,7 +26,7 @@ class Brain:
         clear_screen()
         create_board(self.tiles)
 
-    def take_turn(self, choice):
+    def take_turn(self, choice, which):
         player_choice = int(input("Pick a number! \n"))
         if self.count[player_choice-1] <= 5:
             y = 5 - self.count[player_choice-1]
