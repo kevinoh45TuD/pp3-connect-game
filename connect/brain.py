@@ -19,13 +19,14 @@ class Brain:
                       ["B","B","B","B","B","B","B"],
                       ["B","B","B","B","B","B","B"]]
         self.count = [0,0,0,0,0,0,0]
+        self.available = [1,2,3,4,5,6,7]
         self.color = color
 
     def print_board(self):
         clear_screen()
         create_board(self.tiles)
 
-    def take_turn(self):
+    def take_turn(self, choice):
         player_choice = int(input("Pick a number! \n"))
         if self.count[player_choice-1] <= 5:
             y = 5 - self.count[player_choice-1]
