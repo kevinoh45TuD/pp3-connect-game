@@ -35,5 +35,9 @@ class Brain:
         self.count[player_choice-1] = self.count[player_choice-1] + 1
         if self.count[player_choice-1] === 6:
             available.remove(player_choice)
+        if which === "P":
+            rival.rival_turn(self)
+        elif which === "R":
+            player.player_turn(self)
 
         
