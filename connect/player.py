@@ -16,9 +16,9 @@ class Player:
         picked = False
 
         try:
-            while picked === False:
+            while picked == False:
                 choice = int(input("""
-                Please pick and available option between 1-7"""))
+                Please pick an available option between 1-7 \n"""))
                 if choice in brain.available:
                     brain.take_turn(choice, "P")
                     picked = True
@@ -27,10 +27,10 @@ class Player:
         except TypeError:
             print("""
             Your choice must be a number!""")
-            clear_screen()
+            #clear_screen()
             self.player_turn(brain)
         except ValueError:
             print("""
             Please pick a column with available space!""")
-            clear_screen()
+            #clear_screen()
             self.player_turn(brain)

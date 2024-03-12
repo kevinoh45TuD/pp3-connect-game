@@ -1,4 +1,4 @@
-from connect.brain import Brain
+from connect.game import start_game
 
 def print_title():
     print("""
@@ -18,8 +18,4 @@ def get_user_name():
         get_user_name()
 
 def start():
-    brain = Brain("Player", "Rival", "Y")
-    x = 0
-    while x < 42:
-        brain.take_turn()
-        x = x + 1
+    start_game()
