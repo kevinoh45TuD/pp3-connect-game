@@ -40,4 +40,16 @@ class Brain:
         elif which == "R":
             self.player.player_turn(self)
 
+    def gather_result(self, which, x_pos, y_pos):
+        #Everything with same x_pos
+        vertical = []
+        #Everything with same y_pos
+        horizontal = []
+        #Increase/Decrease x_pos/y_pos the same
+        diagonal_a = []
+        #Increase/Decrease x_pos/y_pos flipped
+        diagonal_b = []
+        #With diagonals stop when x_pos reaches 0/6, when y_pos reaches 0/5
+
+
         
