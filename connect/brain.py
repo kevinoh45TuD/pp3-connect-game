@@ -57,5 +57,25 @@ class Brain:
             horizontal.append(self.tiles[y_pos][j])
         print(horizontal)
 
+        finished_a = 0
+        count = 0
+        temp = []
+        while finished_a == 0:
+            if (x_pos - count) == 0:
+                print(self.tiles[y_pos - count][x_pos - count])
+                finished_a = 1
+            else:
+                print(self.tiles[y_pos - count][x_pos - count])
+                count = count + 1
+        count = 0
+        while finished_a == 1:
+            if (x_pos + count) == 6:
+                print(self.tiles[y_pos + count][x_pos + count])
+                finished_a = 2
+            else:
+                print(self.tiles[y_pos + count][x_pos + count])
+                count = count + 1
+        #print(diagonal_a)
+
 
         
