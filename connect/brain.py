@@ -45,37 +45,52 @@ class Brain:
         vertical = []
         #Everything with same y_pos
         horizontal = []
+        #With diagonals stop when x_pos reaches 0/6, when y_pos reaches 0/5
         #Increase/Decrease x_pos/y_pos the same
         diagonal_a = []
         #Increase/Decrease x_pos/y_pos flipped
         diagonal_b = []
-        #With diagonals stop when x_pos reaches 0/6, when y_pos reaches 0/5
+        #Add values in same column as selected option
         for i in range(6):
             vertical.append(self.tiles[i][x_pos])
         print(vertical)
+        #Add values in same row as selected option
         for j in range(7):
             horizontal.append(self.tiles[y_pos][j])
         print(horizontal)
-
+        #Add values in first diagonal of selected option
         finished_a = 0
-        count = 0
+        count = 1
         temp = []
         while finished_a == 0:
             if (x_pos - count) == 0:
-                print(self.tiles[y_pos - count][x_pos - count])
+                temp.append(self.tiles[y_pos - count][x_pos - count])
                 finished_a = 1
             else:
-                print(self.tiles[y_pos - count][x_pos - count])
-                count = count + 1
+                if (y_pos - count) == 0:
+                    temp.append(self.tiles[y_pos - count][x_pos - count])
+                    finished_a = 1
+                else:
+                    temp.append(self.tiles[y_pos - count][x_pos - count])
+                    count = count + 1
+        count = 1
+        for k in range(len(temp)):
+            diagonal_a.append(temp[len(temp) - count])
+            count = count + 1
         count = 0
         while finished_a == 1:
             if (x_pos + count) == 6:
-                print(self.tiles[y_pos + count][x_pos + count])
+                diagonal_a.append(self.tiles[y_pos + count][x_pos + count])
                 finished_a = 2
             else:
-                print(self.tiles[y_pos + count][x_pos + count])
-                count = count + 1
-        #print(diagonal_a)
+                if (y_pos + count) == 5:
+                    diagonal_a.append(self.tiles[y_pos + count][x_pos + count])
+                    finished_a = 1
+                else:
+                    diagonal_a.append(self.tiles[y_pos + count][x_pos + count])
+                    count = count + 1
+        print(diagonal_a)
+        #Add values in second diagonal of selected option
 
 
         
