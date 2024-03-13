@@ -1,4 +1,5 @@
 from connect.game import start_game
+from connect.brain import Brain
 
 def print_title():
     print("""
@@ -18,4 +19,6 @@ def get_user_name():
         get_user_name()
 
 def start():
-    start_game()
+    #start_game()
+    brain = Brain("player", "rival")
+    brain.gather_result("P", 3, 2)
