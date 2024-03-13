@@ -53,6 +53,9 @@ class Brain:
         for i in range(6):
             vertical.append(self.tiles[i][x_pos])
         print(vertical)
+        for j in range(7):
+            horizontal.append(self.tiles[y_pos][j])
+        print(horizontal)
 
 
         
