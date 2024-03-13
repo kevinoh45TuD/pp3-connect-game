@@ -85,12 +85,42 @@ class Brain:
             else:
                 if (y_pos + count) == 5:
                     diagonal_a.append(self.tiles[y_pos + count][x_pos + count])
-                    finished_a = 1
+                    finished_a = 2
                 else:
                     diagonal_a.append(self.tiles[y_pos + count][x_pos + count])
                     count = count + 1
         print(diagonal_a)
         #Add values in second diagonal of selected option
-
+        finished_b = 0
+        count = 1
+        temp = []
+        while finished_b == 0:
+            if (x_pos - count) == 0:
+                temp.append(self.tiles[y_pos + count][x_pos - count])
+                finished_b = 1
+            else:
+                if (y_pos + count) == 5:
+                    temp.append(self.tiles[y_pos + count][x_pos - count])
+                    finished_b = 1
+                else:
+                    temp.append(self.tiles[y_pos + count][x_pos - count])
+                    count = count + 1
+        count = 1
+        for k in range(len(temp)):
+            diagonal_b.append(temp[len(temp) - count])
+            count = count + 1
+        count = 0
+        while finished_b == 1:
+            if (x_pos + count) == 6:
+                diagonal_b.append(self.tiles[y_pos - count][x_pos + count])
+                finished_b = 2
+            else:
+                if (y_pos - count) == 0:
+                    diagonal_b.append(self.tiles[y_pos - count][x_pos + count])
+                    finished_b = 2
+                else:
+                    diagonal_b.append(self.tiles[y_pos - count][x_pos + count])
+                    count = count + 1
+        print(diagonal_b)
 
         
