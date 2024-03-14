@@ -1,13 +1,23 @@
 from connect.game import start_game
 from connect.brain import Brain
+from rich.console import Console
 
 def print_title():
-    print("""
-         ###  ####  #####  #####  ####   ###  #####    
-        #     #  #  #   #  #   #  #     #       #
-        #     #  #  #   #  #   #  ####  #       #
-        #     #  #  #   #  #   #  #     #       #
-         ###  ####  #   #  #   #  ####   ###    #\n""")
+    console = Console()
+    title_connect = ("""[bright_yellow]
+         ###  ####  #####  #####  ####   ###  #####            
+        #     #  #  #   #  #   #  #     #       #               
+        #     #  #  #   #  #   #  ####  #       #                
+        #     #  #  #   #  #   #  #     #       #                
+         ###  ####  #   #  #   #  ####   ###    #[bright_yellow]""")
+            
+    title_four = ("""[bright_red]
+                         #    #
+                         #    #
+                         ######
+                              #
+                              #[bright_red]\n""")
+    console.print(title_connect, title_four)
 
 def get_user_name():
     """Ask user's name to begin"""
@@ -19,6 +29,5 @@ def get_user_name():
         get_user_name()
 
 def start():
-    start_game()
-    #brain = Brain("player", "rival")
-    #brain.gather_result("P", 3, 2)
+    print_title()
+    
