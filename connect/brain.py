@@ -39,7 +39,6 @@ class Brain:
         self.gather_result(color, player_choice-1, y)
 
     def gather_result(self, which, x_pos, y_pos):
-        print(x_pos, y_pos)
         #Everything with same x_pos
         vertical = []
         #Everything with same y_pos
@@ -52,11 +51,9 @@ class Brain:
         #Add values in same column as selected option
         for i in range(6):
             vertical.append(self.tiles[i][x_pos])
-        print(vertical)
         #Add values in same row as selected option
         for j in range(7):
             horizontal.append(self.tiles[y_pos][j])
-        print(horizontal)
         #Add values in first diagonal of selected option
         finished_a = 0
         count = 0
@@ -88,7 +85,6 @@ class Brain:
                 else:
                     diagonal_a.append(self.tiles[y_pos + count][x_pos + count])
                     count = count + 1
-        print(diagonal_a)
         #Add values in second diagonal of selected option
         finished_b = 0
         count = 0
@@ -120,7 +116,6 @@ class Brain:
                 else:
                     diagonal_b.append(self.tiles[y_pos - count][x_pos + count])
                     count = count + 1
-        print(diagonal_b)
         self.check_result(which, x_pos, y_pos, vertical, horizontal, diagonal_a, diagonal_b)
     
     #Will procede through each of the four arrays checking for a connection. Call for win/loss based on out come.
