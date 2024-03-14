@@ -1,6 +1,8 @@
 from connect.game import start_game
 from connect.brain import Brain
+from connect.screen import clear_screen
 from rich.console import Console
+import sys
 
 def print_title():
     console = Console()
@@ -28,6 +30,30 @@ def get_user_name():
         print("You must only enter letters please")
         get_user_name()
 
+def pick_option():
+    which_option = int(input("""
+    Please select an option: \n
+    1. Start Game \n
+    2. Game Info \n
+    3. Exit Application \n"""))
+    if(which_option > 0 and which_option < 4):
+        if(which_option == 1):
+            start_game()
+        elif(which_option == 2):
+            print("""
+                                           Connect 4 \n
+            The goal of the game is to use your tokens to create a row of at least 4 tokens. \n
+            This row can be vertical, horizontal or diagonal. \n
+            You will take turns with the computer to select a column to drop your token. \n
+            Player color will be 'Red' while computer color will be 'Yellow' \n""")
+            pick_option()
+        elif(which_option == 3):
+            sys.exit(0)
+    else:
+        start()
+        print("Please pick an available option! \n")
+
 def start():
+    clear_screen()
     print_title()
-    
+    pick_option()

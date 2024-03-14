@@ -1,4 +1,5 @@
 from connect.screen import clear_screen
+
 from rich.console import Console
 import sys
 
@@ -21,7 +22,7 @@ class Player:
             while picked == False:
                 console = Console()
                 choice = console.input("""
-                [bright_yellow]Please pick an available option between 1-7 \n[bright_yellow]""")
+                [bright_yellow]Please pick an available option between 1-7 (or 'Q' to quit)\n[bright_yellow]""")
                 if len(choice) >= 2:
                     raise TypeError
                 else:
@@ -34,7 +35,9 @@ class Player:
                             raise ValueError
                     elif choice.isalpha() == True:
                         if choice.lower() == "q":
-                            sys.exit(0)
+                            #sys.exit(0)
+                            from connect.start import start
+                            start()
                         else:
                             raise TypeError
                     else:
