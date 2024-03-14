@@ -73,18 +73,21 @@ class Brain:
         for k in range(len(temp)):
             diagonal_a.append(temp[len(temp) - count])
             count = count + 1
-        count = 0
+        count = 1
         while finished_a == 1:
-            if (x_pos + count) == 6:
-                diagonal_a.append(self.tiles[y_pos + count][x_pos + count])
+            if (x_pos + count > 6 or y_pos + count > 5):
                 finished_a = 2
             else:
-                if (y_pos + count) == 5:
+                if (x_pos + count) == 6:
                     diagonal_a.append(self.tiles[y_pos + count][x_pos + count])
                     finished_a = 2
                 else:
-                    diagonal_a.append(self.tiles[y_pos + count][x_pos + count])
-                    count = count + 1
+                    if (y_pos + count) == 5:
+                        diagonal_a.append(self.tiles[y_pos + count][x_pos + count])
+                        finished_a = 2
+                    else:
+                        diagonal_a.append(self.tiles[y_pos + count][x_pos + count])
+                        count = count + 1
         #Add values in second diagonal of selected option
         finished_b = 0
         count = 0
@@ -104,18 +107,22 @@ class Brain:
         for k in range(len(temp)):
             diagonal_b.append(temp[len(temp) - count])
             count = count + 1
-        count = 0
+        count = 1
         while finished_b == 1:
-            if (x_pos + count) == 6:
-                diagonal_b.append(self.tiles[y_pos - count][x_pos + count])
+            if (x_pos + count > 6 or y_pos - count < 0):
                 finished_b = 2
             else:
-                if (y_pos - count) == 0:
+                if (x_pos + count) == 6:
                     diagonal_b.append(self.tiles[y_pos - count][x_pos + count])
                     finished_b = 2
                 else:
-                    diagonal_b.append(self.tiles[y_pos - count][x_pos + count])
-                    count = count + 1
+                    if (y_pos - count) == 0:
+                        diagonal_b.append(self.tiles[y_pos - count][x_pos + count])
+                        finished_b = 2
+                    else:
+                        diagonal_b.append(self.tiles[y_pos - count][x_pos + count])
+                        count = count + 1
+        print(vertical, horizontal,diagonal_a,diagonal_b)
         self.check_result(which, x_pos, y_pos, vertical, horizontal, diagonal_a, diagonal_b)
     
     #Will procede through each of the four arrays checking for a connection. Call for win/loss based on out come.
@@ -159,9 +166,9 @@ class Brain:
             #Check for diagonal_b
             if len(diagonal_b_list) >= 4:
                 count = 0
-                for c in range(len(diagonal_b_list)):
+                for d in range(len(diagonal_b_list)):
                     
-                    if which == diagonal_b_list[c]:
+                    if which == diagonal_b_list[d]:
                         count = count + 1
                     else:
                         count = 0
@@ -170,7 +177,7 @@ class Brain:
                     done = True
             
             if done == False:
-                #print(f"{which} Did not make a Connection!")
+                
                 done = True
                 if which == "P":
                     self.rival.rival_turn(self)
