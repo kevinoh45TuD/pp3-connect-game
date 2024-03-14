@@ -6,7 +6,7 @@ This project was created using the language 'Python'. It is based on the real li
 
 It has been deployed on Heroku using Code Institute's template to allow users to play it within their browser.
 
-![Start Screen](/docs-pictures/pp3-startscreen.png)
+![Start Screen](/docs-pictures/pp3-title.png)
 
 [Link to Game](https://pp3-connect-four-b560fdff375f.herokuapp.com)
 
