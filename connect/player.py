@@ -1,4 +1,6 @@
 from connect.screen import clear_screen
+from rich.text import Text
+import sys
 
 class Player:
     """
@@ -17,20 +19,23 @@ class Player:
 
         try:
             while picked == False:
-                choice = int(input("""
-                Please pick an available option between 1-7 \n"""))
-                if choice in brain.available:
-                    brain.take_turn(choice, "P")
+                choice = input("""
+                Please pick an available option between 1-7 \n""")
+                num = int(choice)
+                if choice.lower() == "q":
+                    sys.exit(0)
+                elif num in brain.available:
+                    brain.take_turn(num, "P")
                     picked = True
                 else:
                     raise ValueError
         except TypeError:
             print("""
             Your choice must be a number!""")
-            #clear_screen()
+            
             self.player_turn(brain)
         except ValueError:
-            print("""
-            Please pick a column with available space!""")
-            #clear_screen()
+            print(f"""
+            Please pick a column with available space! Available options {brain.available}""")
+            
             self.player_turn(brain)

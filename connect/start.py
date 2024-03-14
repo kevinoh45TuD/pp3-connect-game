@@ -19,6 +19,6 @@ def get_user_name():
         get_user_name()
 
 def start():
-    #start_game()
-    brain = Brain("player", "rival")
-    brain.gather_result("P", 5, 4)
+    start_game()
+    #brain = Brain("player", "rival")
+    #brain.gather_result("P", 5, 4)

@@ -12,12 +12,12 @@ class Brain:
     def __init__(self, player, rival):
         self.player = player
         self.rival = rival
-        self.tiles = [["B","P","B","B","B","B","B"],
+        self.tiles = [["B","B","B","B","B","B","B"],
                       ["B","B","B","B","B","B","B"],
-                      ["B","B","B","P","B","P","B"],
-                      ["B","B","B","B","B","P","B"],
-                      ["B","B","B","P","P","P","P"],
-                      ["B","B","B","B","B","P","P"]]
+                      ["B","B","B","B","B","B","B"],
+                      ["B","B","B","B","B","B","B"],
+                      ["B","B","B","B","B","B","B"],
+                      ["B","B","B","B","B","B","B"]]
         self.count = [0,0,0,0,0,0,0]
         self.available = [1,2,3,4,5,6,7]
         #self.color = color
@@ -35,12 +35,11 @@ class Brain:
         self.count[player_choice-1] = self.count[player_choice-1] + 1
         if self.count[player_choice-1] == 6:
             self.available.remove(player_choice)
-        if which == "P":
-            self.rival.rival_turn(self)
-        elif which == "R":
-            self.player.player_turn(self)
+        
+        self.gather_result(color, player_choice-1, y)
 
     def gather_result(self, which, x_pos, y_pos):
+        print(x_pos, y_pos)
         #Everything with same x_pos
         vertical = []
         #Everything with same y_pos
@@ -60,7 +59,7 @@ class Brain:
         print(horizontal)
         #Add values in first diagonal of selected option
         finished_a = 0
-        count = 1
+        count = 0
         temp = []
         while finished_a == 0:
             if (x_pos - count) == 0:
@@ -92,7 +91,7 @@ class Brain:
         print(diagonal_a)
         #Add values in second diagonal of selected option
         finished_b = 0
-        count = 1
+        count = 0
         temp = []
         while finished_b == 0:
             if (x_pos - count) == 0:
@@ -167,7 +166,7 @@ class Brain:
                 count = 0
                 for c in range(len(diagonal_b_list)):
                     
-                    if which == diagonal_a_list[c]:
+                    if which == diagonal_b_list[c]:
                         count = count + 1
                     else:
                         count = 0
@@ -178,5 +177,9 @@ class Brain:
             if done == False:
                 print(f"{which} Did not make a Connection!")
                 done = True
+                if which == "P":
+                    self.rival.rival_turn(self)
+                elif which == "R":
+                    self.player.player_turn(self)
 
         
