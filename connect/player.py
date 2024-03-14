@@ -54,15 +54,33 @@ class Player:
             self.player_turn(brain)
     
     def end_game(self, brain):
-        which_option = int(input("Would you like to: 1. Restart, 2. Quit \n"))
-        if (which_option == 1 or which_option == 2):
-            if (which_option == 1):
-                from connect.game import start_game
-                start_game()
-            elif (which_option == 2):
-                from connect.start import start
-                start()
-        else:
+        try:
+            console = Console()
+            which_option = console.input("""
+            [bright_yellow]Would you like to: 1. Restart, 2. Quit \n[bright_yellow]""")
+            if (len(which_option) >= 2):
+                raise TypeError
+            else:
+                if (which_option.isnumeric() == True):
+                    num = int(which_option)
+                    if (num == 1 or num == 2):
+                        if (num == 1):
+                            from connect.game import start_game
+                            start_game()
+                        elif (num == 2):
+                            from connect.start import start
+                            start()
+                    else:
+                        raise ValueError
+                else:
+                    raise TypeError
+        except TypeError:
             brain.end_game(self)
-            print("Please pick 1 or 2!")
+            console = Console()
+            console.print("[bold bright_red]Input must be one character and a number![bold bright_red]")
+            self.end_game(brain)
+        except ValueError:
+            brain.end_game(self)
+            console = Console()
+            console.print("[bold bright_red]Please pick 1 or 2![bold bright_red]")
             self.end_game(brain)

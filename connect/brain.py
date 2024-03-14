@@ -143,7 +143,8 @@ class Brain:
                 elif(which == "R"):
                     name = "Computer"
                 self.message = f"Vertical Connection by {name}!"
-                self.end_game(self.player)
+                print(self.message)
+                self.player.end_game(self)
                 done = True
             #Check for horizontal
             count = 0
@@ -159,7 +160,8 @@ class Brain:
                 elif(which == "R"):
                     name = "Computer"
                 self.message = f"Horizontal Connection by {name}!"
-                self.end_game(self.player)
+                print(self.message)
+                self.player.end_game(self)
                 done = True
             #Check for diagonal_a
             if len(diagonal_a_list) >= 4:
@@ -176,7 +178,8 @@ class Brain:
                     elif(which == "R"):
                         name = "Computer"
                     self.message = f"Diagonal Connection by {name}!"
-                    self.end_game(self.player)
+                    print(self.message)
+                    self.player.end_game(self)
                     done = True
             #Check for diagonal_b
             if len(diagonal_b_list) >= 4:
@@ -193,7 +196,8 @@ class Brain:
                     elif(which == "R"):
                         name = "Computer"
                     self.message = f"Diagonal Connection by {name}!"
-                    self.end_game(self.player)
+                    print(self.message)
+                    self.player.end_game(self)
                     done = True
             
             if done == False:
@@ -204,9 +208,8 @@ class Brain:
                     self.player.player_turn(self)
     
     def end_game(self, player):
-        clear_screen()
         self.print_board()
         print(self.message)
-        self.player.end_game(self)
+        #self.player.end_game(self)
 
         

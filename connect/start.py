@@ -40,6 +40,7 @@ def pick_option():
         if(which_option == 1):
             start_game()
         elif(which_option == 2):
+            clear_screen()
             print("""
                                            Connect 4 \n
             The goal of the game is to use your tokens to create a row of at least 4 tokens. \n
