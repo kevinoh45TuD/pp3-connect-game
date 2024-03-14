@@ -14,6 +14,19 @@ class Rival:
         self.color = color
         self.name = "Rival"
 
-    def rival_turn(self, brain):
-        choice = random.choice(brain.available)
-        brain.take_turn(choice, "R")
+    def rival_turn(self, brain, x_pos, direction, highest):
+        if (self.difficulty == "Easy"):
+            choice = random.choice(brain.available)
+            brain.take_turn(choice, "R")
+        elif (self.difficulty == "Hard"):
+            if (highest > 2):
+                if(direction == "Vertical"):
+                    brain.take_turn(x_pos, "R")
+                else:
+                    if(x_pos <= 5):
+                        brain.take_turn(x_pos+1, "R")
+                    else:
+                        brain.take_turn(x_pos-1, "R")
+            else:
+                choice = random.choice(brain.available)
+                brain.take_turn(choice, "R")

@@ -128,6 +128,9 @@ class Brain:
     def check_result(self, which, x_pos, y_pos, vertical_list, horizontal_list, diagonal_a_list, diagonal_b_list):
         done = False
         while done == False:
+            highest = 0
+            highest_pos = 0
+            direction = "Vertical"
             #Check for vertical
             count = 0
             checked = False
@@ -138,6 +141,9 @@ class Brain:
                         checked = True
                 else:
                     if (checked == False):
+                        if (count > highest):
+                            highest = count
+                            highest_pos = x_pos
                         count = 0
             if count >= 4:
                 name = ""
@@ -159,6 +165,10 @@ class Brain:
                         checked = True
                 else:
                     if (checked == False):
+                        if (count > highest):
+                            highest = count
+                            highest_pos = x_pos
+                            direction = "Horizontal"
                         count = 0
             if count >= 4:
                 name = ""
@@ -181,6 +191,10 @@ class Brain:
                             checked = True
                     else:
                         if (checked == False):
+                            if (count > highest):
+                                highest = count
+                                highest_pos = x_pos
+                                direction = "Horizontal"
                             count = 0
                 if count >= 4:
                     name = ""
@@ -203,6 +217,10 @@ class Brain:
                             checked = True
                     else:
                         if (checked == False):
+                            if (count > highest):
+                                highest = count
+                                highest_pos = x_pos
+                                direction = "Horizontal"
                             count = 0
                 if count >= 4:
                     name = ""
@@ -218,7 +236,7 @@ class Brain:
             if done == False:
                 done = True
                 if which == "P":
-                    self.rival.rival_turn(self)
+                    self.rival.rival_turn(self, highest_pos, direction, highest)
                 elif which == "R":
                     self.player.player_turn(self)
     
