@@ -6,6 +6,10 @@ This project was created using the language 'Python'. It is based on the real li
 
 It has been deployed on Heroku using Code Institute's template to allow users to play it within their browser.
 
+![Start Screen](/docs-pictures/pp3-startscreen.png)
+
+[Link to Game](https://pp3-connect-four-b560fdff375f.herokuapp.com)
+
 Below I will outline key aspects of the project and its creation.
 
 ## Table of Contents
@@ -23,6 +27,8 @@ Below I will outline key aspects of the project and its creation.
 ### Start Screen
 
 The Start Screen is what the user will first see. It features the title of the game 'Connect 4' along with 3 options.
+
+![Start Screen](/docs-pictures/pp3-startscreen.png)
 
 ### Game Info
 
