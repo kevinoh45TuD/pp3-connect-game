@@ -24,7 +24,7 @@ class Brain:
 
     def print_board(self):
         clear_screen()
-        create_board(self.tiles)
+        create_board(self.tiles, self.available)
 
     def take_turn(self, choice, which):
         player_choice = choice
@@ -34,7 +34,7 @@ class Brain:
         self.print_board()
         self.count[player_choice-1] = self.count[player_choice-1] + 1
         if self.count[player_choice-1] == 6:
-            self.available.remove(player_choice)
+            self.available[player_choice-1] = "X"
         
         self.gather_result(color, player_choice-1, y)
 
