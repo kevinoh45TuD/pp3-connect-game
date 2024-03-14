@@ -40,12 +40,14 @@ class Player:
                     else:
                         raise TypeError
         except TypeError:
+            brain.print_board
             console = Console()
             console.print("""
             [bold bright_red]Please keep your input to 1 character!
             Your choice must be a number or Q to quit![bold bright_red]""")
             self.player_turn(brain)
         except ValueError:
+            brain.print_board
             console = Console()
             console.print(f"""
             [bold bright_red]Please pick a column with available space! Available options {brain.available}[bold bright_red]""")
