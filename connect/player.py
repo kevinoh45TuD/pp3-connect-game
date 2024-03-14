@@ -21,21 +21,29 @@ class Player:
             while picked == False:
                 choice = input("""
                 Please pick an available option between 1-7 \n""")
-                num = int(choice)
-                if choice.lower() == "q":
-                    sys.exit(0)
-                elif num in brain.available:
-                    brain.take_turn(num, "P")
-                    picked = True
+                if len(choice) >= 2:
+                    raise TypeError
                 else:
-                    raise ValueError
+                    if choice.isnumeric() == True:
+                        num = int(choice)
+                        if num in brain.available:
+                            brain.take_turn(num, "P")
+                            picked = True
+                        else:
+                            raise ValueError
+                    elif choice.isalpha() == True:
+                        if choice.lower() == "q":
+                            sys.exit(0)
+                        else:
+                            raise TypeError
+                    else:
+                        raise TypeError
         except TypeError:
             print("""
-            Your choice must be a number!""")
-            
+            Please keep your input to 1 character!
+            Your choice must be a number or Q to quit!""")
             self.player_turn(brain)
         except ValueError:
             print(f"""
             Please pick a column with available space! Available options {brain.available}""")
-            
             self.player_turn(brain)
