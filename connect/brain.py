@@ -12,12 +12,12 @@ class Brain:
     def __init__(self, player, rival):
         self.player = player
         self.rival = rival
-        self.tiles = [["B","A","B","7","B","F","B"],
-                      ["B","B","B","8","G","B","B"],
-                      ["1","2","3","P","4","5","6"],
-                      ["B","B","H","9","C","B","B"],
-                      ["B","I","B","10","B","D","B"],
-                      ["J","B","B","11","B","B","E"]]
+        self.tiles = [["B","P","B","B","B","B","B"],
+                      ["B","B","B","B","B","B","B"],
+                      ["B","B","B","P","B","P","B"],
+                      ["B","B","B","B","B","P","B"],
+                      ["B","B","B","P","P","P","P"],
+                      ["B","B","B","B","B","P","P"]]
         self.count = [0,0,0,0,0,0,0]
         self.available = [1,2,3,4,5,6,7]
         #self.color = color
@@ -122,20 +122,61 @@ class Brain:
                     diagonal_b.append(self.tiles[y_pos - count][x_pos + count])
                     count = count + 1
         print(diagonal_b)
+        self.check_result(which, x_pos, y_pos, vertical, horizontal, diagonal_a, diagonal_b)
     
     #Will procede through each of the four arrays checking for a connection. Call for win/loss based on out come.
-    def check_result(which, x_pos, y_pos, vertical_list, horizontal_list, diagonal_a_list, diagonal_b_list):
+    def check_result(self, which, x_pos, y_pos, vertical_list, horizontal_list, diagonal_a_list, diagonal_b_list):
         done = False
         while done == False:
+            #Check for vertical
+            count = 0
             for a in range(6):
             
-            for b in range(7)
-
+                if which == vertical_list[a]:
+                    count = count + 1
+                else:
+                    count = 0
+            if count >= 4:
+                print(f"Vertical Connection by {which} at ({x_pos},{y_pos}) !")
+                done = True
+            #Check for horizontal
+            count = 0
+            for b in range(7):
+                
+                if which == horizontal_list[b]:
+                    count = count + 1
+                else:
+                    count = 0
+            if count >= 4:
+                print(f"Horizontal Connection by {which} at ({x_pos},{y_pos}) !")
+                done = True
+            #Check for diagonal_a
             if len(diagonal_a_list) >= 4:
+                count = 0
                 for c in range(len(diagonal_a_list)):
-            
+                    
+                    if which == diagonal_a_list[c]:
+                        count = count + 1
+                    else:
+                        count = 0
+                if count >= 4:
+                    print(f"Diagonal Connection by {which} at ({x_pos},{y_pos}) !")
+                    done = True
+            #Check for diagonal_b
             if len(diagonal_b_list) >= 4:
+                count = 0
                 for c in range(len(diagonal_b_list)):
                     
+                    if which == diagonal_a_list[c]:
+                        count = count + 1
+                    else:
+                        count = 0
+                if count >= 4:
+                    print(f"Diagonal Connection by {which} at ({x_pos},{y_pos}) !")
+                    done = True
+            
+            if done == False:
+                print(f"{which} Did not make a Connection!")
+                done = True
 
         
