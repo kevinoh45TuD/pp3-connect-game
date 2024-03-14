@@ -1,5 +1,5 @@
 from connect.screen import clear_screen
-from rich.text import Text
+from rich.console import Console
 import sys
 
 class Player:
@@ -19,8 +19,9 @@ class Player:
 
         try:
             while picked == False:
-                choice = input("""
-                Please pick an available option between 1-7 \n""")
+                console = Console()
+                choice = console.input("""
+                [bright_yellow]Please pick an available option between 1-7 \n[bright_yellow]""")
                 if len(choice) >= 2:
                     raise TypeError
                 else:
@@ -39,11 +40,13 @@ class Player:
                     else:
                         raise TypeError
         except TypeError:
-            print("""
-            Please keep your input to 1 character!
-            Your choice must be a number or Q to quit!""")
+            console = Console()
+            console.print("""
+            [bold bright_red]Please keep your input to 1 character!
+            Your choice must be a number or Q to quit![bold bright_red]""")
             self.player_turn(brain)
         except ValueError:
-            print(f"""
-            Please pick a column with available space! Available options {brain.available}""")
+            console = Console()
+            console.print(f"""
+            [bold bright_red]Please pick a column with available space! Available options {brain.available}[bold bright_red]""")
             self.player_turn(brain)

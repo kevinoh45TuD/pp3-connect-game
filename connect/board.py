@@ -27,10 +27,10 @@ def create_board(array, available):
                 tile = """#"""
                 tiles.append(tile)
             elif array[y][x] == "P":
-                tile = """[bright_red]#[/bright_red]"""
+                tile = """[bold bright_red]#[bold bright_red]"""
                 tiles.append(tile)
             elif array[y][x] == "R":
-                tile = """[bright_yellow]#[/bright_yellow]"""
+                tile = """[bold bright_yellow]#[bold bright_yellow]"""
                 tiles.append(tile)
         table.add_row(*tiles) 
 

@@ -170,7 +170,7 @@ class Brain:
                     done = True
             
             if done == False:
-                print(f"{which} Did not make a Connection!")
+                #print(f"{which} Did not make a Connection!")
                 done = True
                 if which == "P":
                     self.rival.rival_turn(self)
