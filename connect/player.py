@@ -52,3 +52,17 @@ class Player:
             console.print(f"""
             [bold bright_red]Please pick a column with available space! Available options {brain.available}[bold bright_red]""")
             self.player_turn(brain)
+    
+    def end_game(self, brain):
+        which_option = int(input("Would you like to: 1. Restart, 2. Quit \n"))
+        if (which_option == 1 or which_option == 2):
+            if (which_option == 1):
+                from connect.game import start_game
+                start_game()
+            elif (which_option == 2):
+                from connect.start import start
+                start()
+        else:
+            brain.end_game(self)
+            print("Please pick 1 or 2!")
+            self.end_game(brain)
