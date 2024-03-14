@@ -130,12 +130,15 @@ class Brain:
         while done == False:
             #Check for vertical
             count = 0
+            checked = False
             for a in range(6):
-            
                 if which == vertical_list[a]:
                     count = count + 1
+                    if (count >= 4):
+                        checked = True
                 else:
-                    count = 0
+                    if (checked == False):
+                        count = 0
             if count >= 4:
                 name = ""
                 if(which == "P"):
@@ -148,11 +151,15 @@ class Brain:
                 done = True
             #Check for horizontal
             count = 0
+            checked = False
             for b in range(7):
                 if which == horizontal_list[b]:
                     count = count + 1
+                    if (count >= 4):
+                        checked = True
                 else:
-                    count = 0
+                    if (checked == False):
+                        count = 0
             if count >= 4:
                 name = ""
                 if(which == "P"):
@@ -166,11 +173,15 @@ class Brain:
             #Check for diagonal_a
             if len(diagonal_a_list) >= 4:
                 count = 0
+                checked = False
                 for c in range(len(diagonal_a_list)):
                     if which == diagonal_a_list[c]:
                         count = count + 1
+                        if (count >= 4):
+                            checked = True
                     else:
-                        count = 0
+                        if (checked == False):
+                            count = 0
                 if count >= 4:
                     name = ""
                     if(which == "P"):
@@ -184,11 +195,15 @@ class Brain:
             #Check for diagonal_b
             if len(diagonal_b_list) >= 4:
                 count = 0
+                checked = False
                 for d in range(len(diagonal_b_list)):
                     if which == diagonal_b_list[d]:
                         count = count + 1
+                        if (count >= 4):
+                            checked = True
                     else:
-                        count = 0
+                        if (checked == False):
+                            count = 0
                 if count >= 4:
                     name = ""
                     if(which == "P"):
