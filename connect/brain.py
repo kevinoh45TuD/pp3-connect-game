@@ -122,5 +122,20 @@ class Brain:
                     diagonal_b.append(self.tiles[y_pos - count][x_pos + count])
                     count = count + 1
         print(diagonal_b)
+    
+    #Will procede through each of the four arrays checking for a connection. Call for win/loss based on out come.
+    def check_result(which, x_pos, y_pos, vertical_list, horizontal_list, diagonal_a_list, diagonal_b_list):
+        done = False
+        while done == False:
+            for a in range(6):
+            
+            for b in range(7)
+
+            if len(diagonal_a_list) >= 4:
+                for c in range(len(diagonal_a_list)):
+            
+            if len(diagonal_b_list) >= 4:
+                for c in range(len(diagonal_b_list)):
+                    
 
         
