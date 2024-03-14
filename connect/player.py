@@ -1,7 +1,5 @@
 from connect.screen import clear_screen
-
 from rich.console import Console
-import sys
 
 class Player:
     """
@@ -35,7 +33,6 @@ class Player:
                             raise ValueError
                     elif choice.isalpha() == True:
                         if choice.lower() == "q":
-                            #sys.exit(0)
                             from connect.start import start
                             start()
                         else:

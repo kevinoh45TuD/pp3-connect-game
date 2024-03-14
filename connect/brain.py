@@ -122,7 +122,6 @@ class Brain:
                     else:
                         diagonal_b.append(self.tiles[y_pos - count][x_pos + count])
                         count = count + 1
-        #print(vertical, horizontal,diagonal_a,diagonal_b)
         self.check_result(which, x_pos, y_pos, vertical, horizontal, diagonal_a, diagonal_b)
     
     #Will procede through each of the four arrays checking for a connection. Call for win/loss based on out come.
@@ -138,7 +137,12 @@ class Brain:
                 else:
                     count = 0
             if count >= 4:
-                print(f"Vertical Connection by {which} at ({x_pos},{y_pos}) !")
+                name = ""
+                    if(which == "P"):
+                        name = "Player"
+                    elif(which == "R"):
+                        name = "Computer"
+                print(f"Vertical Connection by {name}!")
                 done = True
             #Check for horizontal
             count = 0
@@ -149,7 +153,12 @@ class Brain:
                 else:
                     count = 0
             if count >= 4:
-                print(f"Horizontal Connection by {which} at ({x_pos},{y_pos}) !")
+                name = ""
+                    if(which == "P"):
+                        name = "Player"
+                    elif(which == "R"):
+                        name = "Computer"
+                print(f"Horizontal Connection by {name}!")
                 done = True
             #Check for diagonal_a
             if len(diagonal_a_list) >= 4:
@@ -161,7 +170,12 @@ class Brain:
                     else:
                         count = 0
                 if count >= 4:
-                    print(f"Diagonal Connection by {which} at ({x_pos},{y_pos}) !")
+                    name = ""
+                    if(which == "P"):
+                        name = "Player"
+                    elif(which == "R"):
+                        name = "Computer"
+                    print(f"Diagonal Connection by {name}!")
                     done = True
             #Check for diagonal_b
             if len(diagonal_b_list) >= 4:
@@ -173,11 +187,15 @@ class Brain:
                     else:
                         count = 0
                 if count >= 4:
-                    print(f"Diagonal Connection by {which} at ({x_pos},{y_pos}) !")
+                    name = ""
+                    if(which == "P"):
+                        name = "Player"
+                    elif(which == "R"):
+                        name = "Computer"
+                    print(f"Diagonal Connection by {name}!")
                     done = True
             
             if done == False:
-                
                 done = True
                 if which == "P":
                     self.rival.rival_turn(self)
