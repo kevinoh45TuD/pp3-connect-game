@@ -43,9 +43,11 @@ def pick_option():
             clear_screen()
             print("""
                                            Connect 4 \n
-            The goal of the game is to use your tokens to create a row of at least 4 tokens. \n
+            The goal of the game is to use your tokens to create a row of \n
+            at least 4 tokens. \n
             This row can be vertical, horizontal or diagonal. \n
-            You will take turns with the computer to select a column to drop your token. \n
+            You will take turns with the computer to select a column \n
+            to drop your token. \n
             Player color will be 'Red' while computer color will be 'Yellow' \n""")
             pick_option()
         elif(which_option == 3):
