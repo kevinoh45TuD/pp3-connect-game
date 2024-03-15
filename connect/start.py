@@ -32,6 +32,7 @@ def pick_option():
         num = int(which_option)
         if(num > 0 and num < 4):
             if(num == 1):
+                clear_screen()
                 start_game()
             elif(num == 2):
                 clear_screen()
