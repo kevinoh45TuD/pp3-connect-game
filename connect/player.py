@@ -20,7 +20,7 @@ class Player:
             while picked == False:
                 console = Console()
                 choice = console.input("""
-                [bright_yellow]Please pick an available option between 1-7 (or 'Q' to quit)\n[bright_yellow]""")
+            [bright_yellow]Please pick an available option between 1-7 (or 'Q' to quit)\n[bright_yellow]""")
                 if len(choice) >= 2:
                     raise TypeError
                 else:
@@ -43,21 +43,21 @@ class Player:
             brain.print_board()
             console = Console()
             console.print("""
-            [bold bright_red]Please keep your input to 1 character!
+                [bold bright_red]Please keep your input to 1 character!
             Your choice must be a number or Q to quit![bold bright_red]""")
             self.player_turn(brain)
         except ValueError:
             brain.print_board()
             console = Console()
             console.print(f"""
-            [bold bright_red]Please pick a column with available space! Available options {brain.available}[bold bright_red]""")
+                [bold bright_red]Please pick a column with available space!\n Available options {brain.available}[bold bright_red]""")
             self.player_turn(brain)
     
     def end_game(self, brain):
         try:
             console = Console()
             which_option = console.input("""
-            [bright_yellow]Would you like to: 1. Restart, 2. Quit \n[bright_yellow]""")
+                [bright_yellow]Would you like to: 1. Restart, 2. Quit \n[bright_yellow]""")
             if (len(which_option) >= 2):
                 raise TypeError
             else:

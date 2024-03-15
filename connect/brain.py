@@ -152,7 +152,7 @@ class Brain:
                 elif(which == "R"):
                     name = "Computer"
                 self.message = f"Vertical Connection by {name}!"
-                print(self.message)
+                print("                     " + self.message)
                 self.player.end_game(self)
                 done = True
             #Check for horizontal
@@ -177,7 +177,7 @@ class Brain:
                 elif(which == "R"):
                     name = "Computer"
                 self.message = f"Horizontal Connection by {name}!"
-                print(self.message)
+                print("                     " + self.message)
                 self.player.end_game(self)
                 done = True
             #Check for diagonal_a
@@ -203,7 +203,7 @@ class Brain:
                     elif(which == "R"):
                         name = "Computer"
                     self.message = f"Diagonal Connection by {name}!"
-                    print(self.message)
+                    print("                     " + self.message)
                     self.player.end_game(self)
                     done = True
             #Check for diagonal_b
@@ -229,7 +229,7 @@ class Brain:
                     elif(which == "R"):
                         name = "Computer"
                     self.message = f"Diagonal Connection by {name}!"
-                    print(self.message)
+                    print("                     " + self.message)
                     self.player.end_game(self)
                     done = True
             
