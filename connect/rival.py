@@ -8,12 +8,11 @@ class Rival:
     Easy: Random select position based columns with space
     Hard: Specific selection based on preventing opponent from winning.
     """
-
     def __init__(self, difficulty, color):
         self.difficulty = difficulty
         self.color = color
         self.name = "Rival"
-
+    #Called when it is computers turn. Determines moved based on difficulty. Passes move to brain's take turn function.
     def rival_turn(self, brain, x_pos, direction, highest):
         if (self.difficulty == "Easy"):
             choice = random.choice(brain.available)
