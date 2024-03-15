@@ -31,17 +31,19 @@ def get_user_name():
         get_user_name()
 
 def pick_option():
-    which_option = int(input("""
+    which_option = (input("""
     Please select an option: \n
     1. Start Game \n
     2. Game Info \n
     3. Exit Application \n"""))
-    if(which_option > 0 and which_option < 4):
-        if(which_option == 1):
-            start_game()
-        elif(which_option == 2):
-            clear_screen()
-            print("""
+    if (which_option in ["1", "2", "3"]):
+        num = int(which_option)
+        if(num > 0 and num < 4):
+            if(num == 1):
+                start_game()
+            elif(num == 2):
+                clear_screen()
+                print("""
                                            Connect 4 \n
             The goal of the game is to use your tokens to create a row of \n
             at least 4 tokens. \n
@@ -49,12 +51,19 @@ def pick_option():
             You will take turns with the computer to select a column \n
             to drop your token. \n
             Player color will be 'Red' while computer color will be 'Yellow' \n""")
-            pick_option()
-        elif(which_option == 3):
-            sys.exit(0)
+                pick_option()
+            elif(num == 3):
+                sys.exit(0)
+            else:
+                clear_screen()
+                print_title()
+                print("There was an unknown issue.. \n")
+                pick_option()
     else:
-        start()
-        print("Please pick an available option! \n")
+        clear_screen()
+        print_title()
+        print("Please pick an available option! 1, 2 or 3 are valid inputs! \n")
+        pick_option()
 
 def start():
     clear_screen()
