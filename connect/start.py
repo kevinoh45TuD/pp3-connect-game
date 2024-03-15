@@ -21,15 +21,6 @@ def print_title():
                               #[bright_red]\n""")
     console.print(title_connect, title_four)
 
-def get_user_name():
-    """Ask user's name to begin"""
-    user_name = input("What is your name? \n")
-    if user_name.isalpha():
-        print(f"Welcome {user_name}!")
-    else:
-        print("You must only enter letters please")
-        get_user_name()
-
 def pick_option():
     which_option = (input("""
     Please select an option: \n
