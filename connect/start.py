@@ -4,6 +4,7 @@ from connect.screen import clear_screen
 from rich.console import Console
 import sys
 
+#Prints the game's title for the start screen
 def print_title():
     console = Console()
     title_connect = ("""[bright_yellow]
@@ -20,7 +21,7 @@ def print_title():
                                           #
                                           #[bright_red]\n""")
     console.print(title_connect, title_four)
-
+#Provides user with options for start menu. Validates user input and executes code based on choice.
 def pick_option():
     which_option = (input("""
                     Please select an option: \n
@@ -55,7 +56,7 @@ def pick_option():
         print_title()
         print("Please pick an available option! 1, 2 or 3 are valid inputs! \n")
         pick_option()
-
+#First function called when program starts. Calls for start menu's title and options to be printed.
 def start():
     clear_screen()
     print_title()

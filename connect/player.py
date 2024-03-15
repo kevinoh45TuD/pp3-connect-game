@@ -44,7 +44,7 @@ class Player:
             console = Console()
             console.print("""
                 [bold bright_red]Please keep your input to 1 character!
-                 Your choice must be a number or Q to quit![bold bright_red]""")
+                Your choice must be a number or Q to quit![bold bright_red]""")
             self.player_turn(brain)
         except ValueError:
             brain.print_board()
