@@ -18,8 +18,6 @@ def create_board(array, available):
     table.add_column(str(available[5]), style="bright_black", justify="center", width=5)
     table.add_column(str(available[6]), style="bright_black", justify="center", width=5)
 
-    #table.add_row(tile, tile, tile, tile, tile, tile, tile)
-    
     for y in range(6):
         tiles = []
         for x in range(7):

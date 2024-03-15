@@ -243,6 +243,5 @@ class Brain:
     def end_game(self, player):
         self.print_board()
         print(self.message)
-        #self.player.end_game(self)
 
         
