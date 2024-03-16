@@ -4,16 +4,17 @@ from connect.screen import clear_screen
 from rich.console import Console
 import sys
 
-#Prints the game's title for the start screen
+
+# Prints the game's title for the start screen
 def print_title():
     console = Console()
     title_connect = ("""[bright_yellow]
-                   ###  ####  #####  #####  ####   ###  #####            
-                  #     #  #  #   #  #   #  #     #       #               
-                  #     #  #  #   #  #   #  ####  #       #                
-                  #     #  #  #   #  #   #  #     #       #                
+                   ###  ####  #####  #####  ####   ###  #####
+                  #     #  #  #   #  #   #  #     #       #
+                  #     #  #  #   #  #   #  ####  #       #
+                  #     #  #  #   #  #   #  #     #       #
                    ###  ####  #   #  #   #  ####   ###    #[bright_yellow]""")
-            
+
     title_four = ("""[bright_red]
                                      #    #
                                      #    #
@@ -21,7 +22,9 @@ def print_title():
                                           #
                                           #[bright_red]\n""")
     console.print(title_connect, title_four)
-#Provides user with options for start menu. Validates user input and executes code based on choice.
+
+
+# Provides user with options for start menu. Validates user input and executes code based on choice.
 def pick_option():
     """
     Original code from:
@@ -34,11 +37,11 @@ def pick_option():
                     3. Exit Application \n"""))
     if (which_option in ["1", "2", "3"]):
         num = int(which_option)
-        if(num > 0 and num < 4):
-            if(num == 1):
+        if (num > 0 and num < 4):
+            if (num == 1):
                 clear_screen()
                 start_game()
-            elif(num == 2):
+            elif (num == 2):
                 clear_screen()
                 print("""
                                 Connect 4 \n
@@ -49,7 +52,7 @@ def pick_option():
         to drop your token. \n
         Player color will be 'Red' while computer color will be 'Yellow' \n""")
                 pick_option()
-            elif(num == 3):
+            elif (num == 3):
                 sys.exit(0)
             else:
                 clear_screen()
@@ -61,7 +64,10 @@ def pick_option():
         print_title()
         print("Please pick an available option! 1, 2 or 3 are valid inputs! \n")
         pick_option()
-#First function called when program starts. Calls for start menu's title and options to be printed.
+
+
+# First function called when program starts.
+# Calls for start menu's title and options to be printed.
 def start():
     clear_screen()
     print_title()

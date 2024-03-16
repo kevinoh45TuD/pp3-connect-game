@@ -1,6 +1,7 @@
 from connect.screen import clear_screen
 import random
 
+
 class Rival:
     """
     Will contain all necessary information for computer opponent.
@@ -12,7 +13,9 @@ class Rival:
         self.difficulty = difficulty
         self.color = color
         self.name = "Rival"
-    #Called when it is computers turn. Determines moved based on difficulty. Passes move to brain's take turn function.
+
+    # Called when it is computers turn. Determines moved based on difficulty.
+    # Passes move to brain's take turn function.
     def rival_turn(self, brain, x_pos, direction, highest):
         """"
         Use of random based on:
@@ -23,10 +26,10 @@ class Rival:
             brain.take_turn(choice, "R")
         elif (self.difficulty == "Hard"):
             if (highest > 2):
-                if(direction == "Vertical"):
+                if (direction == "Vertical"):
                     brain.take_turn(x_pos, "R")
                 else:
-                    if(x_pos <= 5):
+                    if (x_pos <= 5):
                         brain.take_turn(x_pos+1, "R")
                     else:
                         brain.take_turn(x_pos-1, "R")

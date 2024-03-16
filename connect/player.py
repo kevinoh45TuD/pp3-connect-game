@@ -1,6 +1,7 @@
 from connect.screen import clear_screen
 from rich.console import Console
 
+
 class Player:
     """
     Will contain all necessary information for the player.
@@ -10,27 +11,29 @@ class Player:
         self.name = name
         self.color = color
         self.score = 0
-    #Called initial after board load, also called after computer turn. Validates input and passes to brain.
+
+    # Called initial after board load, also called after computer turn.
+    # Validates input and passes to brain.
     def player_turn(self, brain):
         choice = 0
         picked = False
 
         try:
-            while picked == False:
+            while picked is False:
                 console = Console()
                 choice = console.input("""
             [bright_yellow]Please pick an available option between 1-7 (or 'Q' to quit)\n[bright_yellow]""")
                 if len(choice) >= 2:
                     raise TypeError
                 else:
-                    if choice.isnumeric() == True:
+                    if choice.isnumeric():
                         num = int(choice)
                         if num in brain.available:
                             brain.take_turn(num, "P")
                             picked = True
                         else:
                             raise ValueError
-                    elif choice.isalpha() == True:
+                    elif choice.isalpha():
                         if choice.lower() == "q":
                             from connect.start import start
                             start()
@@ -51,7 +54,9 @@ class Player:
             console.print(f"""
                 [bold bright_red]Please pick a column with available space!\n                 Available options {brain.available}[bold bright_red]""")
             self.player_turn(brain)
-    #Called when game is won by either player. Will validate input and start new game or return to start menu.
+
+    # Called when game is won by either player.
+    # Will validate input and start new game or return to start menu.
     def end_game(self, brain):
         try:
             console = Console()
@@ -60,7 +65,7 @@ class Player:
             if (len(which_option) >= 2):
                 raise TypeError
             else:
-                if (which_option.isnumeric() == True):
+                if which_option.isnumeric():
                     num = int(which_option)
                     if (num == 1 or num == 2):
                         if (num == 1):
