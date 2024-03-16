@@ -63,8 +63,8 @@ def pick_option():
     else:
         clear_screen()
         print_title()
-        print("Please pick an available option!
-              "1, 2 or 3 are valid inputs! \n")
+        print("Please pick an available option!"
+              " 1, 2 or 3 are valid inputs! \n")
         pick_option()
 
 

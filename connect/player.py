@@ -84,12 +84,12 @@ class Player:
         except TypeError:
             brain.end_game(self)
             console = Console()
-            console.print("[bold bright_red]Input must be one
-                          "character and a number![bold bright_red]")
+            console.print("[bold bright_red]Input must be one"
+                          " character and a number![bold bright_red]")
             self.end_game(brain)
         except ValueError:
             brain.end_game(self)
             console = Console()
-            console.print("[bold bright_red]Please
-                          "pick 1 or 2![bold bright_red]")
+            console.print("[bold bright_red]Please"
+                          " pick 1 or 2![bold bright_red]")
             self.end_game(brain)
