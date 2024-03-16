@@ -53,7 +53,7 @@ The main game board features 7 columns and 7 rows. This emulates the layout of a
 The table is double-lined to make it stand out with tokens being represented by '#' to try closely emulate
 a token shape from the original game.
 
-Previously each token as a larger shape of 2x2 and 3x3 '#' symbols, this was changed as it made the board to big 
+Previously each token was a larger shape of 2x2 and 3x3 '#' symbols, this was changed as it made the board too big 
 for the specified heroku template screen.
 
 The color for the table is blue. The color for player tokens is red. The color for computer tokens is yellow.
@@ -72,7 +72,7 @@ The color and design for this program is very minimal. This is to remain clear a
 
 The table and colored text is possible due to the rich package used in this project.
 
-### Flow-Charts
+### Flow-Chart
 
 The flow-chart below will show the main steps of the program.
 
@@ -108,7 +108,7 @@ They will have the option to select any of the 3 options once more.
 
 ### Game
 
-If the user picks option 1 a new game will start. The user will be show an empty connect board with the available options 1-7 above.
+If the user picks option 1 a new game will start. The user will be shown an empty connect board with the available options 1-7 above.
 Selecting an option will drop a red token into this column, the computer will take a turn dropping a yellow token.
 
 ![Game Screen](/docs-pictures/pp3-gamescreen.png)
@@ -184,7 +184,7 @@ I used a website called 'SmartDraw' to create the flowchart featured in this Rea
 
 ## Testing
 
-There were two main areas they required extensive testing and bug fixing for the duration of this project.
+There were two main areas that required extensive testing and bug fixing for the duration of this project.
 
 ### Player Inputs
 
@@ -280,10 +280,10 @@ Screenshots of Linter results:
 - Frequent bug relating to user inputing numbers '1-7' while lists starting at 0, simple fixed my -1 to user input when it relates to lists.
 
 - My method for getting diagonals in gather_result used the initial tile position (where the player's token landed) while incrementing / decrementing 
-  both directions for both diagonals, the bug produced entered the initial tile twice.
+  both directions for both diagonals, this bug entered the initial tile twice.
   This was fixed by starting the count at 1 for the second half of each diagonal to skip over the initial tile the second time.
 
-- This fixed produced an additional bug where starting the count at 1 and adding/subtracting this count to the X/Y position of the initial tile would potentially
+- This fix produced an additional bug where starting the count at 1 and adding/subtracting this count to the X/Y position of the initial tile would potentially
   send the number out of the bounds of the list. 
   To fix this I added a check to see if adding/subtracting the count at 1 with the X/Y position would make it go out of bounds before any other code.
 
@@ -359,7 +359,7 @@ Certain steps will be based on using the Code Institute Template.
 - Sign into GitHub and connect account if required.
 - Search for your repositories name.
 - If you locate the correct one, click 'Connect'.
-- Select the option for automatic deployment, when you push to your repo Heroku will build you app again.
+- Select the option for automatic deployment, when you push to your repo Heroku will build your app again.
 - Click into 'Overview' section, here you can see recent activity and if the app is currently building.
 - At the top right you will have the option to 'Open app'.
 
