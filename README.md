@@ -14,6 +14,42 @@ Below I will outline key aspects of the project and its creation.
 
 ## Table of Contents
 
+1. [UX](#ux)
+    - User Stories
+    - Color / Design
+    - Flow-Chart
+2. [Features](#features)
+    - Start Screen
+    - Game Info
+    - Game
+    - End Game
+    - Future Features
+3. [Technologies Used](#technologies-used)
+    - Language
+    - Code
+    - Packages
+    - Modules
+    - Testing
+    - Flow Chart
+4. [Testing](#testing-1)
+    - Player Inputs
+    - Brain Class Functions
+        - Testing gather_results()
+    - Manual Testing Table
+    - Linter Testing
+    - Bugs
+        - Previously Fixed
+        - Known / Current
+5. [Deployment](#deployment)
+    - Setting Up Repository
+    - Setting Up Gitpod Workspace
+    - Deploying on Heroku
+    - Clone Repository
+    - Fork Repository
+6. [Credits](#credits)
+    - Code Institute
+    - Other
+
 ## UX
 
 ### User Stories
@@ -91,6 +127,8 @@ The flow-chart below will show the main steps of the program.
 - Choosing Restart will load a new board.
 - Choosing Quit will return the player to the start screen.
 
+[Back to top](#connect-4)
+
 ## Features
 
 ### Start Screen
@@ -125,6 +163,8 @@ Selecting restart will start a fresh game, whereas quit will bring the user back
 With a project like this many more features code be added, however the two main features I would focus on would be:
 1. Game History: Some system to record previous matches the user has won or lost.
 2. Player 2: It would be possible to allow the user to choose to play locally with a second player on the 1 computer, replacing the computer opponent.
+
+[Back to top](#connect-4)
 
 ## Technologies Used
 
@@ -181,6 +221,8 @@ A Code Institute Python Linter was used to validate the code. The results will b
 I used a website called 'SmartDraw' to create the flowchart featured in this ReadME.
 
 [SmartDraw](https://www.smartdraw.com/flowchart/)
+
+[Back to top](#connect-4)
 
 ## Testing
 
@@ -293,6 +335,8 @@ Screenshots of Linter results:
 Alternatively the approach not working.
 - When win message is printed after the first time the formating is missing and it appears on the far left.
 
+[Back to top](#connect-4)
+
 ## Deployment
 
 This project was created using Gitpod, with a template provided by Code Institute as a starting point.
@@ -400,6 +444,8 @@ Steps:
 Steps are based on GitHub documentation related to forking repositories.
 
 [GitHub Docs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)
+
+[Back to top](#connect-4)
 
 ## Credits
 
