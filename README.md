@@ -18,6 +18,30 @@ Below I will outline key aspects of the project and its creation.
 
 ### User Stories
 
+Here I have outlined some user stories of things the user might want from using this program.
+Below each I will mention how I attempted to implement this in the program.
+
+- As a user, I want to learn about Connect 4 before playing.
+  >The start menu has an option for users to see critical information about Connect 4 goal/loop
+
+- As a user, I want more variation in the computer opponent.
+  >The user will be able to choose between 'Easy' and 'Hard' difficulties for the computer.
+
+- As a user, I want to play Connect 4.
+  >After selecting a difficulty users will be instantly presented with the game.
+
+- As a user, I want clear instructions throughtout the program.
+  >The program uses a lot of validation steps to make sure wrong inputs are not accepted, 
+  while informative messages will be printed to guide the user to the correct input.
+
+- As a user, I want to quickly start a new match when I win/lose.
+  >Once a successful connection is made the game will print a message informing the user of the winner,
+  additionally they will have an option to restart/quit at this point.
+
+- As a user, I want to quit the game/program at my own discretion.
+  >At all times during the game and end screen the user will be able to exit to the start screen,
+  here they will have the option to exit the program.
+
 ### Color / Design
 
 ### Flow-Charts
