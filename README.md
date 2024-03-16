@@ -111,6 +111,49 @@ With a project like this many more features code be added, however the two main 
     
 ## Testing
 
+There were two main areas they required extensive testing and bug fixing for the duration of this project.
+
+### Player Inputs
+
+The player will be required to make inputs throughout the program. Previous testing identified different issues with this input, the main fix being extra
+validation of inputs. All the inputs required by the player follow two similarities: Specified Inputs given, Single Character inputs expected.
+All inputs the player will enter consist of: "Q", "1", "2", "3", "4", "5", "6" and "7".
+The manual testing for each of these inputs and their associated validation will be outlined in a table below.
+
+### Brain Class Functions
+
+The Brain class featured two main functions requiring testing / fixing, gather_results() and check_results().
+
+Once either the player or computer took their turn a function (gather_results) would be run to find neighbouring tiles for Vertical, Horizontal and both Diagonals.
+These four lists would be passed to a different function (check_results) which would loop through the lists in order till it found a valid connection.
+If a connection was found it would print a message specifying the orientation and whether player or computer had won, also providing the user with the options
+of restarting or quiting.
+If no connection was made it would pass the turn to the other player.
+	
+Both functions had various bugs and fixes, which will be outlined below.
+
+### Manual Testing Table
+
+Any outcome wrapped in "" indicates the result is program asking for the same input again,
+with this additional informative message to guide the user.
+
+| Feature Tested | User Input | Outcome   |
+| -------------- | ---------- | --------- |
+| 1. Start Menu  |          1 | Start Game|
+| | 2 | Show Info |
+| | 3 | Exit Program |
+| | Anything else | "Please pick an available option! 1, 2 or 3 are valid inputs!" |
+| 2. Difficulty | 1 or 2 | Game will start with selected difficulty |
+| | Anything else | "Please pick either 1 or 2" |
+| 3. Game | 1 - 7 | Drop a token in corresponding column |
+| | Q/q | Return to the start screen |
+| | Any number not 1-7 or any filled column number | "Please pick a column with available space! Available options [1-7]" |
+| | Anything else | "Please keep your input to 1 character! Your choice must be a number or Q to quit!" |
+| 4. Restart/Quit | 1 | Restart Game |
+| | 2 | Return to the start screen |
+| | Any other number | "Please pick 1 or 2!" |
+| | Anything else | "Input must be one character and a number!" |
+
 ## Deployment
 
 This project was created using Gitpod, with a template provided by Code Institute as a starting point.
