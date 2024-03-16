@@ -205,6 +205,25 @@ If no connection was made it would pass the turn to the other player.
 	
 Both functions had various bugs and fixes, which will be outlined below.
 
+#### Testing gather_results()
+
+The gather_results() function in the brain class was tested / fixed a lot during development to make sure things were correct.
+
+The method of testing was to hardcode values for the tiles list.
+
+![Tile List](/docs-pictures/pp3-screenshot-tiles32.png)
+
+With this set the gather_results() was called directly with specified x/y co-ordinates.
+When testing I had additional print statements to print each of the four directions: Vertical, Horizontal, Diagonal 1, Diagonal 2
+
+With the x/y input of (3,2) the console result:
+
+![Output 3,2](/docs-pictures/pp3-screenshot-output32.png)
+
+With the x/y input of (5,4) the console result:
+
+![Output 5,4](/docs-pictures/pp3-screenshot-tiles54.png)
+
 ### Manual Testing Table
 
 Any outcome wrapped in "" indicates the result is program asking for the same input again,
@@ -272,6 +291,7 @@ Screenshots of Linter results:
 
 - Hard difficulty does not work as originally invisioned. This may be due to the approach working correctly, but being a bad approach. 
 Alternatively the approach not working.
+- When win message is printed after the first time the formating is missing and it appears on the far left.
 
 ## Deployment
 
