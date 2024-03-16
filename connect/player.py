@@ -22,7 +22,8 @@ class Player:
             while picked is False:
                 console = Console()
                 choice = console.input("""
-            [bright_yellow]Please pick an available option between 1-7 (or 'Q' to quit)\n[bright_yellow]""")
+            [bright_yellow]Please pick an available option between 1-7
+            (or 'Q' to quit)\n[bright_yellow]""")
                 if len(choice) >= 2:
                     raise TypeError
                 else:
@@ -52,7 +53,8 @@ class Player:
             brain.print_board()
             console = Console()
             console.print(f"""
-                [bold bright_red]Please pick a column with available space!\n                 Available options {brain.available}[bold bright_red]""")
+                [bold bright_red]Please pick a column with available space!\n
+                Available options {brain.available}[bold bright_red]""")
             self.player_turn(brain)
 
     # Called when game is won by either player.
@@ -61,7 +63,8 @@ class Player:
         try:
             console = Console()
             which_option = console.input("""
-                [bright_yellow]Would you like to: 1. Restart, 2. Quit \n[bright_yellow]""")
+                [bright_yellow]Would you like to:
+                1. Restart, 2. Quit \n[bright_yellow]""")
             if (len(which_option) >= 2):
                 raise TypeError
             else:
@@ -81,10 +84,12 @@ class Player:
         except TypeError:
             brain.end_game(self)
             console = Console()
-            console.print("[bold bright_red]Input must be one character and a number![bold bright_red]")
+            console.print("[bold bright_red]Input must be one
+                          "character and a number![bold bright_red]")
             self.end_game(brain)
         except ValueError:
             brain.end_game(self)
             console = Console()
-            console.print("[bold bright_red]Please pick 1 or 2![bold bright_red]")
+            console.print("[bold bright_red]Please
+                          "pick 1 or 2![bold bright_red]")
             self.end_game(brain)

@@ -14,15 +14,23 @@ def create_board(array, available):
 
     tile = """##\n##"""
 
-    table = Table(title="Connect 4", box=box.DOUBLE, style="blue3", show_lines=True, header_style="white")
+    table = Table(title="Connect 4", box=box.DOUBLE,
+                  style="blue3", show_lines=True, header_style="white")
 
-    table.add_column(str(available[0]), style="bright_black", no_wrap=True, justify="center", width=5)
-    table.add_column(str(available[1]), style="bright_black", justify="center", width=5)
-    table.add_column(str(available[2]), style="bright_black", justify="center", width=5)
-    table.add_column(str(available[3]), style="bright_black", justify="center", width=5)
-    table.add_column(str(available[4]), style="bright_black", justify="center", width=5)
-    table.add_column(str(available[5]), style="bright_black", justify="center", width=5)
-    table.add_column(str(available[6]), style="bright_black", justify="center", width=5)
+    table.add_column(str(available[0]), style="bright_black",
+                     no_wrap=True, justify="center", width=5)
+    table.add_column(str(available[1]), style="bright_black",
+                     justify="center", width=5)
+    table.add_column(str(available[2]), style="bright_black",
+                     justify="center", width=5)
+    table.add_column(str(available[3]), style="bright_black",
+                     justify="center", width=5)
+    table.add_column(str(available[4]), style="bright_black",
+                     justify="center", width=5)
+    table.add_column(str(available[5]), style="bright_black",
+                     justify="center", width=5)
+    table.add_column(str(available[6]), style="bright_black",
+                     justify="center", width=5)
 
     for y in range(6):
         tiles = []

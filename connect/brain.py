@@ -87,10 +87,12 @@ class Brain:
                     finished_a = 2
                 else:
                     if (y_pos + count) == 5:
-                        diagonal_a.append(self.tiles[y_pos + count][x_pos + count])
+                        diagonal_a.append(self.tiles
+                                          [y_pos + count][x_pos + count])
                         finished_a = 2
                     else:
-                        diagonal_a.append(self.tiles[y_pos + count][x_pos + count])
+                        diagonal_a.append(self.tiles
+                                          [y_pos + count][x_pos + count])
                         count = count + 1
         # Add values in second diagonal of selected option
         finished_b = 0
@@ -121,16 +123,20 @@ class Brain:
                     finished_b = 2
                 else:
                     if (y_pos - count) == 0:
-                        diagonal_b.append(self.tiles[y_pos - count][x_pos + count])
+                        diagonal_b.append(self.tiles
+                                          [y_pos - count][x_pos + count])
                         finished_b = 2
                     else:
-                        diagonal_b.append(self.tiles[y_pos - count][x_pos + count])
+                        diagonal_b.append(self.tiles
+                                          [y_pos - count][x_pos + count])
                         count = count + 1
-        self.check_result(which, x_pos, y_pos, vertical, horizontal, diagonal_a, diagonal_b)
+        self.check_result(which, x_pos, y_pos, vertical,
+                          horizontal, diagonal_a, diagonal_b)
 
     # Will procede through each of the four arrays checking for a connection.
     # Call for win/loss based on out come.
-    def check_result(self, which, x_pos, y_pos, vertical_list, horizontal_list, diagonal_a_list, diagonal_b_list):
+    def check_result(self, which, x_pos, y_pos, vertical_list,
+                     horizontal_list, diagonal_a_list, diagonal_b_list):
         done = False
         while done is False:
             highest = 0
@@ -241,7 +247,8 @@ class Brain:
             if done is False:
                 done = True
                 if which == "P":
-                    self.rival.rival_turn(self, highest_pos, direction, highest)
+                    self.rival.rival_turn(self, highest_pos,
+                                          direction, highest)
                 elif which == "R":
                     self.player.player_turn(self)
 

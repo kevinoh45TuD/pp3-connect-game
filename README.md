@@ -227,6 +227,13 @@ with this additional informative message to guide the user.
 | | Any other number | "Please pick 1 or 2!" |
 | | Anything else | "Input must be one character and a number!" |
 
+### Validator Testing
+
+I used a Code Institute provided Python Linter to validate the code.
+[Python Linter](https://pep8ci.herokuapp.com/#)
+
+
+
 ### Bugs
 
 #### Previously Fixed
