@@ -217,4 +217,71 @@ alternatively type in the name of the repository.
 Once all changes are commited and pushed, at the top left of your screen you can click the burger icon to the left of 'EXPLORER' 
 and click 'Gitpod: Stop Workspace' to return to the dashboard.
 
+### Deploying on Heroku
+
+These steps require having the 'requirements.txt' file up to date with anything the project needs.
+Certain steps will be based on using the Code Institute Template.
+
+- Sign into Heroku website.
+- Navigate to your dashboard.
+- At the top right click 'New'.
+- Click 'Create new app'.
+- The app will require a unique name, I used 'pp3-connect-four'.
+- I selected 'Europe' for 'Choose a region'.
+- Click 'Create app'.
+- You will now be on the 'Deploy' tab for your new app.
+- Select 'Settings' on the same row as 'Deploy'.
+- Click 'Reveal Config Vars'.
+- Set 'KEY' to 'PORT', set 'VALUE' to '8000'.
+- Click 'Add' to the right of this.
+- Scroll down and select 'Add buildpack'.
+- Select the option for 'python', click 'Add Buildpack'
+- Repeat this step with the 'nodejs' buildpack.
+- Return to the 'Deploy' section.
+- Next to 'Deployment method' select 'GitHub'.
+- Sign into GitHub and connect account if required.
+- Search for your repositories name.
+- If you locate the correct one, click 'Connect'.
+- Select the option for automatic deployment, when you push to your repo Heroku will build you app again.
+- Click into 'Overview' section, here you can see recent activity and if the app is currently building.
+- At the top right you will have the option to 'Open app'.
+
+Your Heroku app should be correctly set up at this point.
+
+Steps based on information gained from Code Institute course content.
+
+### Clone Repository
+
+Here I will outline the steps to clone a repository on GitHub.
+This allows you to save a local copy.
+
+Steps:
+- Navigate to the GitHub page for the desired repository.
+- Click on 'Code'
+- Copy the link provided under HTTPS.
+- Open Git Bash.
+- Change the current working directory to the location where you want the cloned directory.
+- Type 'git clone ' along with the copied link.
+- Press Enter to create cloned repository.
+
+Steps are based on GitHub documentation related to cloning repositories.
+
+[GitHub Docs](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository?tool=webui)
+
+### Fork Repository
+
+Here I will outline the steps to fork a repository on GitHub.
+This allows you to have your own repository to make changes to based on an original repositories code/settings.
+Additionally you may submit a pull request to the original repository owner.
+
+Steps:
+- Navigate to the GitHub page for the desired repository.
+- At the top right, below the search box, click 'Fork'.
+- Leaving all the settings will be fine, but here you may apply a new name or description.
+- Click 'Create fork'.
+
+Steps are based on GitHub documentation related to forking repositories.
+
+[GitHub Docs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)
+
 ## Credits
