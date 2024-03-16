@@ -227,12 +227,29 @@ with this additional informative message to guide the user.
 | | Any other number | "Please pick 1 or 2!" |
 | | Anything else | "Input must be one character and a number!" |
 
-### Validator Testing
+### Linter Testing
 
 I used a Code Institute provided Python Linter to validate the code.
 [Python Linter](https://pep8ci.herokuapp.com/#)
 
+No errors are currently present with any of the files.
 
+Some reoccuring issues that were fixed include:
+- No space after '#' for comments.
+- Lines being over 79 characters.
+- Whitespace
+- Extra lines between functions
+
+Screenshots of Linter results:
+
+- [run.py result](/docs-pictures/pp3-linter-run.png)
+- [start.py result](/docs-pictures/pp3-linter-start.png)
+- [screen.py result](/docs-pictures/pp3-linter-screen.png)
+- [rival.py result](/docs-pictures/pp3-linter-rival.png)
+- [player.py result](/docs-pictures/pp3-linter-player.png)
+- [game.py result](/docs-pictures/pp3-linter-game.png)
+- [brain.py result](/docs-pictures/pp3-linter-brain.png)
+- [board.py result](/docs-pictures/pp3-linter-board.png)
 
 ### Bugs
 
