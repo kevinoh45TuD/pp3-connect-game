@@ -74,7 +74,22 @@ The table and colored text is possible due to the rich package used in this proj
 
 ### Flow-Charts
 
+The flow-chart below will show the main steps of the program.
+
 ![Game FlowChart](/docs-pictures/pp3-flowchart.png)
+
+- Once the program starts the user will be presented with 3 options.
+- They may exit the program at this point.
+- If they select the game info option they will be provided with text related to 'Connect 4'
+- They will still have access to the 3 options at this stage.
+- Starting the game will load the board.
+- The player will take the first turn.
+- After which it will check for a win.
+- If not a win it will pass to the computer to take a turn.
+- This loop will repeat till one player wins (making a connection).
+- Once a win occurs the player will have the option to Restart or Quit.
+- Choosing Restart will load a new board.
+- Choosing Quit will return the player to the start screen.
 
 ## Features
 
