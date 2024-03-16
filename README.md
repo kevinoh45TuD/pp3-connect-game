@@ -154,6 +154,28 @@ with this additional informative message to guide the user.
 | | Any other number | "Please pick 1 or 2!" |
 | | Anything else | "Input must be one character and a number!" |
 
+### Bugs
+
+#### Previously Fixed
+
+- When check_results looped through the different lists if it counted to 4 or greater (a connection) but the following tile was not a match it would reset the count to 0.
+  This was fixed by adding a bool that would set 'True' if the count reached 4 at any point and only reset count if this bool is false.
+
+- Frequent bug relating to user inputing numbers '1-7' while lists starting at 0, simple fixed my -1 to user input when it relates to lists.
+
+- My method for getting diagonals in gather_result used the initial tile position (where the player's token landed) while incrementing / decrementing 
+  both directions for both diagonals, the bug produced entered the initial tile twice.
+  This was fixed by starting the count at 1 for the second half of each diagonal to skip over the initial tile the second time.
+
+- This fixed produced an additional bug where starting the count at 1 and adding/subtracting this count to the X/Y position of the initial tile would potentially
+  send the number out of the bounds of the list. 
+  To fix this I added a check to see if adding/subtracting the count at 1 with the X/Y position would make it go out of bounds before any other code.
+
+#### Known/Current
+
+- Hard difficulty does not work as originally invisioned. This may be due to the approach working correctly, but being a bad approach. 
+Alternatively the approach not working.
+
 ## Deployment
 
 This project was created using Gitpod, with a template provided by Code Institute as a starting point.
