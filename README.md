@@ -149,6 +149,10 @@ The only package used in this project was 'Rich'.
 The purpose of using this package was the table function and coloring of text.
 Both features allowing me to create a convincing 'Connect 4' board.
 
+Along with the package itself being used, I used the documentation for rich quite extensively to make sure things worked the way I wanted.
+
+[Rich Docs](https://rich.readthedocs.io/en/latest/introduction.html)
+
 ### Modules
 
 #### sys
@@ -168,6 +172,12 @@ This module was used for "choice = random.choice(brain.available)" for the compu
 A Code Institute Python Linter was used to validate the code. The results will be provided below.
 
 [Linter](https://pep8ci.herokuapp.com)
+
+### Flowchart
+
+I used a website called 'SmartDraw' to create the flowchart featured in this ReadME.
+
+[SmartDraw](https://www.smartdraw.com/flowchart/)
 
 ## Testing
 
@@ -345,3 +355,26 @@ Steps are based on GitHub documentation related to forking repositories.
 [GitHub Docs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)
 
 ## Credits
+
+- A special thanks to my mentor Matt Boden for his assistance throughtout the project! [MattBCoding](https://github.com/MattBCoding)
+
+### Code Institute
+
+- Code Institute template used for repository [Template](https://github.com/Code-Institute-Org/p3-template)
+
+- Code Institute learning modules used to learn different aspects of Python [Code Institute](https://codeinstitute.net/ie/)
+
+### Other
+
+- An article on GitHub was used to help with creating this README doc [Article](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+
+- I went with an approach in my 'run.py' recommended by my mentor. This allowed my 'run.py' to remain tidy and leave my other files in a contained folder.
+[Post related to method](https://www.geeksforgeeks.org/what-does-the-if-__name__-__main__-do/)
+
+- I found a method to clear my terminal from a Stack Overflow post. [Stack Overflow](https://stackoverflow.com/questions/2084508/clear-the-terminal-in-python)
+
+- I found another post on Stack Overflow that helped with unpacking a list for rich table rows. [Stack Overflow](https://stackoverflow.com/questions/65216850/list-of-lists-into-a-python-rich-table)
+
+- A specific section of W3schools helped with random implementation. [W3Schools](https://www.w3schools.com/python/ref_random_choice.asp)
+
+- A specific freeCodeCamp article helped with using the exit() function [freeCodeCamp](https://www.freecodecamp.org/news/python-exit-how-to-use-an-exit-function-in-python-to-stop-a-program/)
