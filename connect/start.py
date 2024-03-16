@@ -24,7 +24,8 @@ def print_title():
     console.print(title_connect, title_four)
 
 
-# Provides user with options for start menu. Validates user input and executes code based on choice.
+# Provides user with options for start menu.
+# Validates user input and executes code based on choice.
 def pick_option():
     """
     Original code from:
