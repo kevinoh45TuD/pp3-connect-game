@@ -44,6 +44,34 @@ Below each I will mention how I attempted to implement this in the program.
 
 ### Color / Design
 
+Below I will outline some color / design choices relating specifically to the game section.
+
+![Game Screen](/docs-pictures/pp3-gamescreen.png)
+
+The main game board features 7 columns and 7 rows. This emulates the layout of a physical Connect 4 board.
+
+The table is double-lined to make it stand out with tokens being represented by '#' to try closely emulate
+a token shape from the original game.
+
+Previously each token as a larger shape of 2x2 and 3x3 '#' symbols, this was changed as it made the board to big 
+for the specified heroku template screen.
+
+The color for the table is blue. The color for player tokens is red. The color for computer tokens is yellow.
+This is once again to emulate the color scheme users are familiar with for the actual connect 4 game.
+
+The row at the top featuring the numbers 1-7 was added to inform users their available options, 
+if a column becomes filled completely the number above will become an 'X'.
+
+Directly below the board any messages informing users of issues with their input will be shown.
+This text will be in red to make it distinct from the text below it.
+
+Directly below this will be the standard message asking the user to input 1-7 or Q to quit.
+This text will be yellow as to fit with a red/yellow color scheme.
+
+The color and design for this program is very minimal. This is to remain clear and understandable for users.
+
+The table and colored text is possible due to the rich package used in this project.
+
 ### Flow-Charts
 
 ## Features
