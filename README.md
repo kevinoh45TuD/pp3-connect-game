@@ -74,6 +74,8 @@ The table and colored text is possible due to the rich package used in this proj
 
 ### Flow-Charts
 
+![Game FlowChart](/docs-pictures/pp3-flowchart.png)
+
 ## Features
 
 ### Start Screen
@@ -108,7 +110,12 @@ Selecting restart will start a fresh game, whereas quit will bring the user back
 With a project like this many more features code be added, however the two main features I would focus on would be:
 1. Game History: Some system to record previous matches the user has won or lost.
 2. Player 2: It would be possible to allow the user to choose to play locally with a second player on the 1 computer, replacing the computer opponent.
-    
+
+## Technologies Used
+
+The primary language used to create this project was 'Python'.
+
+
 ## Testing
 
 There were two main areas they required extensive testing and bug fixing for the duration of this project.
