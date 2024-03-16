@@ -201,6 +201,20 @@ I took these steps to setup my Github repository:
 
 ### Setting Up Gitpod Workspace
 
+It is recommended to sign into Gitpod with the Github account used in the above steps.
+There are various methods to create a workspace with a specified repository, I will outline one these methods.
+
 I took these steps to setup my Gitpod workspace:
-- 
+- Sign into Gitpod with Github account.
+- Navigate to 'Workspaces' section.
+- At the top right of this section click 'New Workspace'.
+- Here you can either paste the link copied from the final step of setting up the repository,
+alternatively type in the name of the repository.
+- I left the other two settings default.
+- Click 'Continue'.
+- Gitpod will now setup your workspace.
+
+Once all changes are commited and pushed, at the top left of your screen you can click the burger icon to the left of 'EXPLORER' 
+and click 'Gitpod: Stop Workspace' to return to the dashboard.
+
 ## Credits
