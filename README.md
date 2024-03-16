@@ -436,7 +436,7 @@ This allows you to have your own repository to make changes to based on an origi
 Additionally you may submit a pull request to the original repository owner.
 
 Steps:
-- Navigate to the GitHub page for the desired repository.
+- Navigate to the GitHub page for the desired repository. 
 - At the top right, below the search box, click 'Fork'.
 - Leaving all the settings will be fine, but here you may apply a new name or description.
 - Click 'Create fork'.
