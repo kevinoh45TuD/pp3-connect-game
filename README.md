@@ -158,14 +158,17 @@ Along with the package itself being used, I used the documentation for rich quit
 #### sys
 
 This module was used for "sys.exit(0)" to allow the application to exit on the start menu.
+Based on [freeCodeCamp](https://www.freecodecamp.org/news/python-exit-how-to-use-an-exit-function-in-python-to-stop-a-program/)
 
 #### os
 
 This module was used for "os.system('cls' if os.name == 'nt' else 'clear')" to clear the terminal screen.
+Based on [Stack Overflow](https://stackoverflow.com/questions/2084508/clear-the-terminal-in-python)
 
 #### random
 
 This module was used for "choice = random.choice(brain.available)" for the computer to select a random choice from the remaining options.
+Based on [W3Schools](https://www.w3schools.com/python/ref_random_choice.asp)
 
 ### Testing
 
