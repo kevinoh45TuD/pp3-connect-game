@@ -14,6 +14,10 @@ class Rival:
         self.name = "Rival"
     #Called when it is computers turn. Determines moved based on difficulty. Passes move to brain's take turn function.
     def rival_turn(self, brain, x_pos, direction, highest):
+        """"
+        Use of random based on:
+        https://www.w3schools.com/python/ref_random_choice.asp
+        """
         if (self.difficulty == "Easy"):
             choice = random.choice(brain.available)
             brain.take_turn(choice, "R")

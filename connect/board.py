@@ -4,6 +4,10 @@ from rich import box
 from rich.align import Align
 
 def create_board(array, available):
+    """
+    Unpacking list help from:
+    https://stackoverflow.com/questions/65216850/list-of-lists-into-a-python-rich-table
+    """
     console = Console()
     
     tile = """##\n##"""
