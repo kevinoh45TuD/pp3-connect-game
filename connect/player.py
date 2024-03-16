@@ -6,12 +6,11 @@ class Player:
     Will contain all necessary information for the player.
     Functions for taking turn and any other input from the user.
     """
-
     def __init__(self, name, color):
         self.name = name
         self.color = color
         self.score = 0
-    
+    #Called initial after board load, also called after computer turn. Validates input and passes to brain.
     def player_turn(self, brain):
         choice = 0
         picked = False
@@ -52,7 +51,7 @@ class Player:
             console.print(f"""
                 [bold bright_red]Please pick a column with available space!\n                 Available options {brain.available}[bold bright_red]""")
             self.player_turn(brain)
-    
+    #Called when game is won by either player. Will validate input and start new game or return to start menu.
     def end_game(self, brain):
         try:
             console = Console()

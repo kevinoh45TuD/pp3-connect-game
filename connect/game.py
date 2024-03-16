@@ -1,9 +1,9 @@
-
 from connect.brain import Brain
 from connect.player import Player
 from connect.rival import Rival
 from connect.screen import clear_screen
 
+#Creates all required instances. User input based on computer difficulty.
 def start_game():
     which_diff = (input("""
                     Please select a difficulty for the computer: \n

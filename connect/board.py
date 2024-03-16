@@ -3,6 +3,7 @@ from rich.table import Table
 from rich import box
 from rich.align import Align
 
+#Create and print board with input from brain class. Using rich package.
 def create_board(array, available):
     """
     Unpacking list help from:

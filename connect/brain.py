@@ -8,7 +8,6 @@ class Brain:
     Print board with this information.
     Calculate if there is a successfull connect!
     """
-
     def __init__(self, player, rival):
         self.player = player
         self.rival = rival
@@ -21,11 +20,11 @@ class Brain:
         self.count = [0,0,0,0,0,0,0]
         self.available = [1,2,3,4,5,6,7]
         self.message = ""
-
+    #Calls function in board file with tiles list list.
     def print_board(self):
         clear_screen()
         create_board(self.tiles, self.available)
-
+    #Recieves turn from either player or computer. Will update all relevant variables and call gather_result.
     def take_turn(self, choice, which):
         player_choice = choice
         color = which
@@ -35,9 +34,8 @@ class Brain:
         self.count[player_choice-1] = self.count[player_choice-1] + 1
         if self.count[player_choice-1] == 6:
             self.available[player_choice-1] = "X"
-        
         self.gather_result(color, player_choice-1, y)
-
+    #Populate four specified lists based on choice from take_turn. Will call check_results.
     def gather_result(self, which, x_pos, y_pos):
         #Everything with same x_pos
         vertical = []
@@ -123,7 +121,6 @@ class Brain:
                         diagonal_b.append(self.tiles[y_pos - count][x_pos + count])
                         count = count + 1
         self.check_result(which, x_pos, y_pos, vertical, horizontal, diagonal_a, diagonal_b)
-    
     #Will procede through each of the four arrays checking for a connection. Call for win/loss based on out come.
     def check_result(self, which, x_pos, y_pos, vertical_list, horizontal_list, diagonal_a_list, diagonal_b_list):
         done = False
@@ -239,7 +236,7 @@ class Brain:
                     self.rival.rival_turn(self, highest_pos, direction, highest)
                 elif which == "R":
                     self.player.player_turn(self)
-    
+    #Called by player class if issue with user input. Will print board and win message again.
     def end_game(self, player):
         self.print_board()
         print(self.message)
