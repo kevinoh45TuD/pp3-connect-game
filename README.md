@@ -471,3 +471,5 @@ Steps are based on GitHub documentation related to forking repositories.
 - A specific section of W3schools helped with random implementation. [W3Schools](https://www.w3schools.com/python/ref_random_choice.asp)
 
 - A specific freeCodeCamp article helped with using the exit() function [freeCodeCamp](https://www.freecodecamp.org/news/python-exit-how-to-use-an-exit-function-in-python-to-stop-a-program/)
+
+[Back to top](#connect-4)
