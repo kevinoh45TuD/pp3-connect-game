@@ -113,8 +113,46 @@ With a project like this many more features code be added, however the two main 
 
 ## Technologies Used
 
-The primary language used to create this project was 'Python'.
+### Language
 
+- The primary language used to create this project was 'Python'.
+
+- W3schools was used to reference the documentation for Python. [W3schools](https://www.w3schools.com)
+
+### Code
+
+- GitHub was used for version control of my repository. [Github](https://github.com)
+
+- Gitpod was used as a cloud-based IDE. [Gitpod](https://www.gitpod.io)
+
+### Packages
+
+The only package used in this project was 'Rich'.
+
+[Rich](https://pypi.org/project/rich/)
+
+The purpose of using this package was the table function and coloring of text.
+Both features allowing me to create a convincing 'Connect 4' board.
+
+### Modules
+
+#### sys
+
+This module was used for "sys.exit(0)" to allow the application to exit on the start menu.
+
+#### os
+
+This module was used for "os.system('cls' if os.name == 'nt' else 'clear')" to clear the terminal screen.
+
+#### random
+
+This module was used for "choice = random.choice(brain.available)" for the computer to select a random choice from the remaining options.
+
+### Testing
+
+A Code Institute Python Linter was used to validate the code. The results will be provided below.
+
+[Linter](https://pep8ci.herokuapp.com)
 
 ## Testing
 
